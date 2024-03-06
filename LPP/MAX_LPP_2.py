@@ -1,0 +1,15 @@
+from pulp import*
+model = LpProblem(name ="Solution",sense=LpMaximize)
+x=LpVariable(name="x",lowBound=0)
+y=LpVariable(name="y",lowBound=0)
+z=LpVariable(name="z",lowBound=0)
+model +=(2*x+3*y<=8)
+model +=(2*x+5*z<=10)
+model +=(3*x+2*y+4*z<=15)
+model +=3*x+5*y+4*z
+print('\n',model)
+print('\n',model.solve())
+print('\n Model Objective Value = ',model.objective.value())
+print('\n Value Of x = ',x.value())
+print('\n Value Of y = ',y.value())
+print('\n Value Of z = ',z.value())
