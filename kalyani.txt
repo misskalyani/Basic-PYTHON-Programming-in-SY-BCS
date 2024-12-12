@@ -1,0 +1,171 @@
+HII....I am Kalyani Chaudhari..
+I am studying in TY BCS Computer Science at RBNB College.
+I am from Jalgaon.
+I am learning Java,PHp,python,DS,OS etc..
+
+#Write a python program to write a list to a file.
+f1=open("abc.txt","w")
+l1=["java","php","python"]
+for i in l1:
+    f1.write(i+"\n")
+f1.close()
+print("Write Successfully...")
+
+#Write a python program to get the file size of a plain file
+f=open("abc.txt","r")
+s=f.read()
+print("size =",len(s))
+f.close()
+
+#Write a python program to count the frequency of words in a file
+
+f1=open("abc.txt","r")
+s=f1.read()
+s1=s.split(" ")
+l1=[]
+for i in s1:
+    if i not in l1:
+        print(i,"count",s1.count(i))
+    l1.append(i)
+f1.close()
+
+#Write a python program to count the frequency of words in a file
+f1=open("abc.txt","r")
+c=0
+while True:
+    s=f1.readline()
+    c=c+1;
+    if s=="":
+        break;
+print("number of lines =",c)
+f1.close()
+
+#Write a python program to find the longest words
+f1=open("abc.txt","r")
+s=f1.read()
+s1=s.split(" ")
+s2=""
+for i in s1:
+    if len(i)>len(s2):
+        s2=i
+print("Longest Word = ",s2)
+f1.close()
+
+#Write a python program to read a file line by line store it into vairable
+f1=open("abc.txt","r")
+s1=""
+while True:
+    s=f1.readline()
+    if s=="":
+        break
+    s1=s1+s
+print("Varibale = ",s1)
+f1.close()
+
+#Write a python program to read a file line by line store it into list
+f1=open("abc.txt","r")
+l1=[]
+while True:
+    s1=f1.readline()
+    if s1=="":
+        break
+    l1.append(s1)
+print("list =",l1)
+f1.close()
+
+#Write a python program to read last n lines
+f1=open("abc.txt","r")
+n=int(input("Enter Lines"))
+lines=f1.readlines()
+for i in lines[-n:]:
+    print(i,end='')
+f1.close()
+
+#Write a python program to append text to a file and display the text
+f1=open("xyz.txt","w")
+f1.write("\nRBNB College Shrirampur")
+f1.close()
+
+f1=open("xyz.txt","r")
+a=f1.read()
+print(a)
+f1.close()
+
+#Write a python program to read first n lines
+f1=open("kalyani.txt","r")
+n=int(input("Enter No of Lines to read"))
+for i in range(0,n):
+        a=f1.readline()
+        print(a,end="")
+f1.close()
+
+
+#Write a python program to read first n lines
+f1=open("kalyani.txt","r")
+s=f1.readlines()
+n=int(input("Enter no of lines to read"))
+for i in range(0,n):
+    print(s[i],end="")
+f1.close()    
+
+
+#Write a python program to print each line of file in reverse order
+f1=open("abc.txt","r")
+while True:
+    s=f1.readline()
+    if s=="":
+        break
+    print(s[::-1],end="")
+f1.close()
+
+
+#Write a python program to append text to a file and display the text
+f1=open("pqr.txt","w")
+f1.write("HIIIIIIII HELLOOOOOO")
+a=f1.read()
+print(a)
+f1.close()
+
+
+#Write a python program to compute the no.of characters ,words and line in a file
+f1=open("kalyani.txt","r")
+c1=0
+w=0
+l=0
+while True:
+    s=f1.readline()
+    l=l+len(s)
+    if s=="":
+        break
+    c1=c1+1#line count
+    s1=s.split(" ")
+    for a in s1:
+        w=w+1
+print("lines=",c1)   
+print("words=",w)
+print("char=",l)
+
+#copy content from one file to another file
+f1=open("abc.txt","r")
+f2=open("pqr.txt","w")
+while True:
+    s=f1.readline()
+    if s=="":
+        break
+    f2.write(s)
+f1.close()
+f2.close()
+print("File copy succesfully..")
+
+#write text in to file
+f1=open("abc.txt","w")
+f1.write("Hiii HELLOo")
+f1.close()
+print("file write succ...")
+
+
+#read file
+f1=open("abc.txt","r")
+s=f1.read()
+print(s)
+f1.close()

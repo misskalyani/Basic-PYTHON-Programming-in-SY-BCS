@@ -1,0 +1,259 @@
+delete list element - used to delete emelemt of list or delete variables
+
+del a - delete complete list
+  or
+del a[2] - list element
+ or
+del a[2,5]  range in list 
+
+
+
+list opreators
+
+1] list repeater - repetation of list  --multiply content of list 
+
+syntax - list*no of times repeation
+
+example	
+a=[11,22,33]
+print (a*3)
+
+>>> [11,22,33,11,22,33,11,22,33]    
+
+2] list concationation  used to merge /concate 2 or more list 
+	+ symbol is used to concate 2 list
+
+syntax list1+list2
+
+example
+
+a=[11,22]
+b=[33,44,55]
+print(a+b)
+
+>>> [11,22,33,44,55]
+
+3]  display list elements one by one 
+	we use for loop here 
+	syntax  
+	
+	for value in list:
+		print(value)	
+
+example
+	a=[11,22,33,44]
+	for i in a:
+		print(i)
+>>>
+11
+22
+33
+44
+
+
+ for loop syntax
+for variable in range(start_index, end_index)
+
+example
+for a in range(1,5)
+	print(a)
+>>>
+1
+2
+3
+4
+5
+
+or 
+
+for variable in listname
+	print(variable)
+
+a=[11,22,33,44]
+	for i in a:
+		print(i)
+
+>>>
+11
+22
+33
+44
+
+s=["java","php","cpp","dsa","python"]
+for i in s:
+   print(i)
+
+>>>
+
+java
+php
+cpp
+dsa
+python
+
+
+
+Q) accept no number in list and print
+
+n=int(input("ENter number"))
+a=[]
+for i in range(0,n):
+	num=int(input("ENter number"))
+	a.append(num)
+print(a)
+print("Even numbers")
+for i in range(0,n):
+	if a[i]%2==0:
+		print(a[i])
+
+
+# append --add only one element at the end of list
+
+a=[11,22,33,44]
+b=[10,20,30]
+a.append(b)
+print(a)
+
+output >>> [11,22,33,44,[10,20,30]]
+
+# extend -- add more than one element at the end of list 
+
+a=[11,22,33,44]
+b=[10,20,30]
+a.extend(b)
+print(a)
+
+output >>> [11,22,33,44,10,20,30]
+
+# insert - this function insert element at given potion in the list
+
+syntax -- a.insert(index,no_to insert)
+
+example
+
+a=[11,22,33,44]
+a.insert(2,99)
+print(a)
+
+output >>> [11,22,99,33,44]
+
+# remove - remove the first occurred element of the element is remove 
+if there are same value more than one times
+
+del is used to remove element by insex
+del a[2]
+
+remove is used to remove element by value
+
+
+a=[11,22,33,44,55,33]
+a.remove(33)
+print(a)
+
+>>>[11,22,44,55,33]   ---only first element is removed in case there 
+are  multiple nos\values
+
+
+# pop()
+
+it is used tu remove and retrive last element
+
+syntax val=a.pop()
+
+example
+a=[11,22,33,44]
+val=a.pop()
+print("a=",a)
+print("Deleted /pop element ",val)
+
+>>> a= [11,22,33]
+>>> deleted elemment=44
+
+--by default pop function remove last element 
+--if we pass index to pop function we can retrive any index element
+
+syntax val=a.pop(index)
+
+example
+a=[11,22,33,44]
+val=a.pop(2)
+print(a)
+print("Deleted /pop element ",val)
+
+>>> a= [11,22,44]
+>>> deleted elemment=33
+
+
+#revere()  -- it is uued to reverse the list element
+
+syntax a.reverse()
+
+a=[11,22,33,44]
+a.reverse()
+print(a)
+
+>>> [44,33,22,11]
+
+# len() --it is used to print length of list
+
+a=[11,22,33,44,33,55,33]
+print("Length of list=",len(a))
+
+>>> Length of list = 7
+
+# count --used to count how many times the no is in the list
+
+a=[11,22,33,44,33,55,33]
+print("Count Value=",count(33))
+
+>>> Count value = 3
+
+
+max and min -- used to display max and min element
+a=[11,22,33,44,7,33,55,33]
+
+print("minimum number=",min(a))
+print("maximun number=",max(a))
+
+
+
+# sort -- used to sort element in accending order
+
+syntax a.sort()
+
+a=[66,44,11,9,66,77,44]
+a.sort()
+print(a)
+
+>>>[9,11,44,44,66,66,77]
+
+# sort reverse-- used to sort element in descending order
+
+syntax a.sort(reverse=True)
+
+a=[66,44,11,9,66,77,44]
+a.sort(reverse=True)
+print(a)
+
+>>>[77,66,66,44,44,11,9]
+
+# clear()-- used to empty / clear the list
+a=[11,22,33]
+a.clear()
+print(a)
+
+>>>[]
+
+
+# copy() -- return shallow copy of the list
+	-- copy one list in another
+a=[11,22,33]
+b=a.copy()
+print(a)
+print(b)
+
+>>>> [11,22,33]		--a list
+>>>> [11,22,33]		--b list
+
+
+
